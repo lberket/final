@@ -1,0 +1,60 @@
+.navbar {
+
+    padding-bottom: 10px !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    /* Adjust the values to your desired shadow effect */
+    font-weight: 550;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+     /* font-family: 'Lora', serif; */
+ /* font-family: 'Merriweather', serif; */
+ /* font-family: 'Poppins', sans-serif; */
+ font-family: 'PT Serif', serif;
+ /* font-family: 'Rubik', sans-serif; */
+ /* font-family: 'Vollkorn', serif;  */
+ /* font-family: 'Cinzel', serif; */
+/* font-family: 'Libre Baskerville', serif; */
+/* font-family: 'Newsreader', serif; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Space Mono', monospace; */
+}
+
+.nav-link{
+    color: #555555 !important;
+}
+
+
+.navbar-brand {
+    margin-left: 5rem;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-brand {
+        margin-left: 1rem;
+    }
+    
+}
+
+.logo {
+    max-width: 10rem;
+    margin-right: 1rem;
+}
+
+.right-nav {
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+button {
+    font-weight: 550;
+
+}
+@media screen and (min-width: 768px) {
+    .subscribe{
+        margin-right: 1rem;
+    }
+}
