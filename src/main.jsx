@@ -10,9 +10,7 @@ import ErrorPage from "./error-page";
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from "./routes/Components/Home";
 import Articles from "./routes/Components/Articles";
-import Events from "./routes/Components/Events";
-import Search from "./routes/Components/Search";
-import { useState, useEffect, useRef } from 'react';
+
 import A1 from "./routes/Components/Articles/A1";
 import A2 from "./routes/Components/Articles/A2";
 import A3 from "./routes/Components/Articles/A3";
