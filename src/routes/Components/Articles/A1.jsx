@@ -1,12 +1,17 @@
 import "./Articles.css";
+import a1 from "../../images/a1.jpg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Image from 'react-bootstrap/Image';
 
 
 function A1() {
 
     return (
         <>
+            <Image src={a1} className="ar-img" rounded/>
 
             <h2 className="title">Back to school - later? Sleep, school start times and academic performance</h2>
+
             <p className="article-text">
 
 
@@ -94,6 +99,14 @@ function A1() {
 
             </p>
 
+   
+ <p className="article-text">
+
+
+<strong>Author: </strong>
+
+                Alen Juginović
+            </p>
 <br />
 
 

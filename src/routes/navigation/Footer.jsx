@@ -55,8 +55,8 @@ const Footer = () => {
                         <div className="col-md-2 mb-md-0 mb-2">
                             <h5 className="text-bold">Product</h5>
                             <ul className="list-unstyled">
-                                <li><Link className="lll" to={"#!"}>Books</Link></li>
-                                <li><Link className="lll" to={"#!"}>Events</Link></li>
+                                <li><Link className="lll" to={"services"}>Services</Link></li>
+                                {/* <li><Link className="lll" to={"successstories"}>Success Stories</Link></li> */}
                                 <li><Link className="lll" to={"articles"}>Articles</Link></li>
 
                             </ul>
@@ -65,9 +65,9 @@ const Footer = () => {
                         <div className="col-md-2 mb-md-0 mb-2">
                             <h5 className="text-bold">Interact</h5>
                             <ul className="list-unstyled">
+                            <li><a className="lll" href="contactus">Contact Us</a></li>
                                 <li><a className="lll" href="https://gmail.us5.list-manage.com/subscribe?u=53a55e95c2046d2c099fcc543&id=4a6cdbd34c">Newsletter</a></li>
-                                <li><a className="lll" href="#!">Contact us</a></li>
-                                <li><a className="lll" href="#!">Book an event</a></li>
+                                <li><a className="lll" href="aboutus">About Us</a></li>
                             </ul>
                         </div>
 

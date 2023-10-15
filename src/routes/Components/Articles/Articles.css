@@ -14,23 +14,35 @@
     margin-left: 8%;
     margin-right: 8%;
     text-align: left;
-    margin-top: 5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 
 }
 .link{
-    color: rgb(146, 146, 146);
+    color: rgb(37, 144, 158);
     text-decoration: underline;
 }
 
 .link:hover{
-    color: rgb(38, 63, 63) !important;
+    color: rgb(12, 85, 85) !important;
+}
+
+.credit{
+    margin-top: 5px;
+    color: rgb(165, 165, 165) !important;
+    font-size: smaller;
+
 }
 
 .paragraph{
     font-weight: 550;
     color:black;
     font-style: italic;
+}
+.ar-img{
+    margin-top: 5rem;
+    width: 80%;
+
 }
 
 .paragraph:hover{
@@ -39,14 +51,22 @@
 
 @media screen and (min-width: 768px) {
     .article-text{
-        margin-left: 33%;
-        margin-right: 33%;
+        margin-left: 30%;
+        margin-right: 30%;
         margin-top: 2rem;
         margin-bottom: 1rem;
+        font-size: large;
     }
     .title{
-        margin-left: 33%;
-        margin-right: 33%;
+        margin-left: 30%;
+        margin-right: 30%;
+        font-size: 36px;
+
+    }
+    .ar-img{
+        margin-left: 30%;
+        margin-right: 30%;
+        width: 40%;
     }
 
 }

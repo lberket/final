@@ -11,7 +11,7 @@ import A1 from "./Components/Articles/A1";
 import A2 from "./Components/Articles/A2";
 import A3 from "./Components/Articles/A3";
 import 'bootstrap/dist/css/bootstrap.css';
-
+import ScrollToTop from "./Components/ScrollToTop";
 
 export default function Root() {
     
@@ -26,6 +26,8 @@ export default function Root() {
   
     return (
       <>
+            <ScrollToTop />
+
       <Navbar onSearch={handleSearch} />
 {/* 
           <nav>

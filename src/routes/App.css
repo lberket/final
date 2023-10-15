@@ -2,11 +2,18 @@
   margin: 0 auto;
   text-align: center;
 }
-
 body {
   font-family: 'PT Serif', serif;
 }
-
+.contact-title{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: 'Playfair Display', serif !important;
+  margin-left: 20% !important;
+  margin-right: 20%;
+  color: rgb(26, 26, 26);
+  font-weight: 700;
+}
 .text-link {
   color: inherit;
   text-decoration: inherit;
@@ -14,18 +21,45 @@ body {
 
 .articles-title {
   text-align: left;
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 2rem;
   margin-left: 6%;
 }
+.research-title{
+  text-align: left;
+  margin-top: 15%;
+  margin-bottom:0.1rem;
+  margin-left: 6%;
+  font-size: 33px;
+  font-family: 'DM Serif Display', serif;
+}
 
+.research-title2{
+  text-align: left;
+  margin-top: 0%;
+  margin-bottom: 1.6rem;
+  margin-left: 6%;
+  margin-right: 6%;
+  font-size: 33px;
+  font-family: 'DM Serif Display', serif;
+
+}
+.research{
+  text-align: left;
+  margin-bottom: 2.5rem;
+  margin-left: 6%;
+  margin-right: 6%;
+  font-size: larger;
+}
 .articles {
   width: 90%;
   border: none;
   margin-left: 4%;
-
 }
 
+.a-title{
+  font-family: 'DM Serif Display', serif !important;
+}
 
 .beggining {
   position: relative;
@@ -58,9 +92,6 @@ body {
   font-size: 40px;
 }
 
-
-
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -74,6 +105,10 @@ body {
 
 
 @media screen and (min-width: 767px) {
+  .article-img{
+    width: 94% !important;
+
+  }
   .articles {
     width: 70%;
     margin-left: 15%;
@@ -81,10 +116,46 @@ body {
 
   .articles-title {
     text-align: left;
-    margin-top: 10%;
+    margin-top: 2%;
     margin-bottom: 2rem;
     margin-left: 16%;
+  }
 
+  .research-title{
+    text-align: left;
+    margin-top: 10%;
+    margin-bottom:0.1rem;
+    margin-left: 16%;
+    font-size: 40px;
+    font-family: 'DM Serif Display', serif;
+
+  }
+
+  .research-title2{
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 2rem;
+    margin-left: 16%;
+    margin-right: 16%;
+    font-size: 40px;
+    font-family: 'DM Serif Display', serif;
+
+  }
+  .research{
+    text-align: left;
+    margin-bottom: 2.5rem;
+    margin-left: 16%;
+    margin-right: 16%;
+    font-size: larger;
+  }
+
+  .partnerships{
+    margin-left: 18% !important;
+    margin-right: 18% !important;
+    font-size: 38px;
+    line-height: 55px !important;
+    font-family: 'DM Serif Display', serif;
+    ;
   }
 
 
@@ -96,42 +167,92 @@ body {
 
 
 
-@media (max-width: 767px) {
-  .card-container>* {
-    flex: 0 0 80%;
+@media (max-width: 800px) {
+  .headpage {
+    padding-left: 8%;
+    position: absolute;
+    top: 15%;
+    width: 100%;
   }
 
-
   .beggining {
-    margin-top: 50px;
+    margin-top: 0px !important;
     font-size: small;
   }
 
   .beggining-text {
 
-    font-size: 10px !important;
+    font-size: 18px !important;
     color: rgb(157, 175, 187);
     text-align: left;
     font-weight: 400;
+    max-width: 86%;
 
   }
+      .text-title {
+      font-size: 500%;
+      max-width: 90% !important;
+    }
 
-  .text-title {
-    font-size: 26.5px;
-    max-width: 39%;
-  }
+}
+/* CSS */
+.card-container1 {
+  transition: opacity 0.4s ease-in-out;
+  /*Adjustthisvaluebasedonyourcardcontent*/opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+}
+
+.card-hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 
 
+@media (max-width: 500px) {
+  .text-title {
+    margin-top: 20px;
+    font-size: 350% !important;
+    max-width: 90% !important;
+  }
+  .contactt{
+    margin-left: 10% !important;
+  
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-title{
+    margin-bottom: 0px !important;
+    margin-left:10% !important;
+    margin-right: 10%;
+  }
+  .card-container>* {
+    flex: 0 0 80%;
+  }
+  .contactt{
+    margin-left: 18% !important;
+  
+  }
+.club-img{
+  /* Initial circle size */
+  max-width: 350px;
+  /* Initial circle size */
+  margin-bottom: 20px;
+  margin: -5px;
+}
+}
 
 
-
-
-
-
-
-
-
+.club-img{
+  /* Initial circle size */
+  height: 225px;
+  /* Initial circle size */
+  margin-bottom: 20px;
+}
 
 .circles {
   display: flex;
@@ -139,10 +260,24 @@ body {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+.club-center{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  align-items: center;
+
+}
 
 
+.clubs-row {
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  width: 70%;
 
-
+  justify-content: space-between;
+  /* Equal spacing between circles */
+}
 
 .circle-row {
   margin-left: 3%;
@@ -183,6 +318,8 @@ body {
   /* Transition for on-hover effect */
 }
 
+
+
 .circle {
   text-align: center;
   padding: 20px;
@@ -197,16 +334,48 @@ body {
   box-shadow: 0 0 5px 5px #fcffff;
   /* Soft border with a matching hover background color */
 }
+  .partnerships{
+    margin: 40px;
+    line-height: 35px;
+    font-weight: 600;
+    color: rgb(65, 65, 65);
+    font-family: 'DM Serif Display', serif;
+    ;
+  }
+
+.clubs{
+  font-family: 'DM Serif Display', serif;
+  font-size: larger;
+  margin: 5px;
+  line-height: 25px;
+}
 
 /* Media queries for smaller and larger devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
 
 
+  .club-center{
+    display: block;
+    justify-content: center;
+  }
   .circles {
     display: block;
     justify-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+  .clubs-row{
+    flex-wrap: wrap;
+    /* Wrap the circles to new rows on smaller devices */
+    justify-content: center;
+    /* Center the circles horizontally */
+    width: 90%;
+  }
+
+  .clubs{
+    margin-right: 3% !important;
+    margin-bottom: 18px;
+
   }
 
   .circle-row {
@@ -230,25 +399,50 @@ body {
 
 @media screen and (min-width: 1200px) {
 
+
   .text-title {
     font-size: 60px;
-
-
   }
 
   .articles {
-    width: 60%;
+    width: 50%;
     border: none;
-    margin-left: 20%;
-
-
+    margin-left: 25%;
   }
 
   .articles-title {
     text-align: left;
-    margin-top: 7%;
+    margin-top: 2%;
     margin-bottom: 2.5rem;
-    margin-left: 20%;
+    margin-left: 25%;
+  }
+  .research-title{
+    text-align: left;
+    margin-top: 7%;
+    margin-bottom:0.2rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 40px;
+    font-family: 'DM Serif Display', serif;
+
+  }
+
+  .research-title2{
+    text-align: left;
+    margin-top: 0%;
+    margin-bottom: 2.5rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 40px;
+    font-family: 'DM Serif Display', serif;
+
+  }
+  .research{
+    text-align: left;
+    margin-bottom: 2.5rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: x-large;
   }
 
   .beggining-text {
@@ -266,6 +460,11 @@ body {
     width: 45%;
 
   }
+    .clubs-row {
+      margin-left: 6%;
+      margin-right: 6%;
+      width: 60%;
+    }
 
   .circle-container {
     height: 175px;
@@ -276,7 +475,52 @@ body {
     /* Larger font size for larger devices */
   }
 
+
+
   .headpage {
     padding-left: 10%;
+  }
+}
+
+
+.article-img{
+  margin-bottom: 3.2%;
+  border-radius: 3% !important;
+  -webkit-border-radius: 3% !important;
+  -moz-border-radius: 3% !important;
+  -ms-border-radius: 3% !important;
+  -o-border-radius: 3% !important;
+}
+
+.au-title{
+  margin-top: 1%;
+  font-family: 'DM Serif Display', serif !important;
+}
+
+.accord{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 50px;
+  font-size: 18px;
+  font-family: 'PT Serif', serif;
+}
+.accord2{
+  margin-left: 28%;
+  margin-right: 28%;
+  margin-bottom: 50px;
+  font-size: 17px;
+  font-family: 'PT Serif', serif;
+}
+
+@media (max-width: 767px) {
+  .accord{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 17px;
+  }
+  .accord2{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 17px;
   }
 }
