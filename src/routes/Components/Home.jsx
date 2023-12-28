@@ -135,7 +135,7 @@ function Home() {
             <img src={real} alt="" className='club-img' />
             <br />
             <p style={{marginBottom:"8px", fontSize:"x-large"}}>
-              Real Madrid C.F.
+              R
             </p>
             <p>
             14-time Champions League Winner
