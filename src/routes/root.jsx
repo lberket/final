@@ -12,39 +12,40 @@ import A2 from "./Components/Articles/A2";
 import A3 from "./Components/Articles/A3";
 import 'bootstrap/dist/css/bootstrap.css';
 import ScrollToTop from "./Components/ScrollToTop";
-
+import User from "./Components/kontekst"
 export default function Root() {
     
-  const [tema, postaviTemu] = useState("User");
+  const [tema, postaviTemu] = useState("individual");
+
   const [searchFor, setSearchFor] = useState("");
   const [show, setShow] = useState(false);
+
 
   const handleSearch = (search) => {
     setSearchFor(search);
     setShow(true);
   }; 
-  
+  function promjenaTeme(){
+    postaviTemu(tema == "individual" ? "athlete" : "individual")
+  }
     return (
       <>
             <ScrollToTop />
 
-      <Navbar onSearch={handleSearch} />
-{/* 
-          <nav>
-            <ul>
-              <li>
-              <Link to={`articles`}>Your Name</Link>
-              </li>
-              <li>
-              <Link to={`home`}>Your Friend</Link>
-              </li>
-            </ul>
-          </nav> */}
+      <User.Provider value ={tema}>
+
+
+
+      <Navbar onSearch={handleSearch}  changeTheme={promjenaTeme}/>
 
         <div id="detail">
             <Outlet />
         </div>
         <Footer />
+        
+        
+        
+        </User.Provider>
       </>
     );
   }

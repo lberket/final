@@ -257,7 +257,7 @@ return(
                 <Accordion className='accord'>
       <Accordion.Item eventKey="0">
         <Accordion.Header style={{padding:"8px"}}>Holistic Approach and Personalization</Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body style={{fontSize:"16.5px", textAlign:"left"}}>
           
         Unlike generic solutions in the market, we recognize that <u>each athlete has 
         their own unique sleep patterns and requirements</u> influenced by factors such 
@@ -272,7 +272,7 @@ return(
 
       <Accordion.Item eventKey="1">
         <Accordion.Header  style={{padding:"8px"}}>Expert Team from Leading World Institutions</Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body  style={{fontSize:"16.5px", textAlign:"left"}}>
         Our team of sleep experts is the driving force behind our exceptional 
         services. We have carefully assembled a roster of renowned sleep consultants 
         and coaches from some of the world's most prestigious institutions, including 
@@ -287,14 +287,14 @@ return(
 
       <Accordion.Item eventKey="2">
         <Accordion.Header style={{padding:"8px"}}>Ongoing Support and Refinements</Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body  style={{fontSize:"16.5px", textAlign:"left"}}>
         We understand that <u>sleep optimization is not a one-time event</u> but an ongoing journey. We go beyond the one-time consultation. Our commitment to athletes' success means we follow them throughout their journey, providing continuous support, monitoring, and adjustment of their sleep programs. This ensures sustained improvements in sleep quality and performance.
         </Accordion.Body>
       </Accordion.Item>
 
       <Accordion.Item eventKey="3">
         <Accordion.Header style={{padding:"8px"}}>Data-Driven Insights</Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body  style={{fontSize:"16.5px", textAlign:"left"}}>
         We believe in the power of data to drive meaningful results. We go beyond 
         subjective assessments by leveraging advanced wearable technology and sleep 
         tracking devices to collect objective sleep data. <u>This data, combined with 

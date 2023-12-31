@@ -8,32 +8,40 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
+import User from "../Components/kontekst";
+import { useContext } from 'react';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 
-const Navbar = ({ onSearch }) => {
+const Navbar = ({ onSearch , changeTheme}) => {
 
-    // const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         setIsMobile(window.innerWidth <= 600);
-    //     };
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 600);
+        };
 
-    //     handleResize(); // Check initial screen width
-    //     window.addEventListener('resize', handleResize);
+        handleResize(); // Check initial screen width
+        window.addEventListener('resize', handleResize);
 
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //     };
-    // }, []);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const [showNavbar, setShowNavbar] = useState(false)
 
 
 
+    const [tema] = useContext(User)
+
+    function promjenaTeme(){
+        postaviTemu(tema == "a" ? "athlete" : "individual")
+      }
+
     const handleShowNavbar = () => {
-        setShowNavbar(!showNavbar);
-        console.log(showNavbar)
+        setShowNavbar(!showNavbar)
     };
 
     const articles = [
@@ -106,7 +114,28 @@ const Navbar = ({ onSearch }) => {
 
 
 
+
+
+
+
+
             <div className="el-right">
+
+
+
+                
+        <User.Provider value={[tema, promjenaTeme]}>
+        {!isMobile && (<ButtonGroup aria-label="Basic example" style={{marginTop:"3%"}}>
+
+            <Button variant={tema=="i" ? "secondary" : "outline-secondary"} size="sm" onClick={tema=="a" ? changeTheme : ()=>{}} style={{maxHeight:"30px"}}>Individual</Button>
+            <Button variant={tema=="a" ? "secondary" : "outline-secondary"} size="sm" onClick={tema=="i" ? changeTheme : ()=>{}} style={{maxHeight:"30px", marginRight:"10px"}}>Athlete</Button>
+
+            </ButtonGroup>
+            )}
+
+        </User.Provider>
+
+
             <div className="menu-icon" onClick={handleShowNavbar}>
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="45" viewBox="0 0 128 128">
                     <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"></path><path fill="#444b54" d="M64,117c-29.2,0-53-23.8-53-53s23.8-53,53-53s53,23.8,53,53S93.2,117,64,117z M64,17c-25.9,0-47,21.1-47,47s21.1,47,47,47s47-21.1,47-47S89.9,17,64,17z"></path><path fill="#444b54" d="M86.5 52h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 52 86.5 52zM86.5 67h-45c-1.7 0-3-1.3-3-3s1.3-3 3-3h45c1.7 0 3 1.3 3 3S88.2 67 86.5 67z"></path><g><path fill="#444b54" d="M86.5,82h-45c-1.7,0-3-1.3-3-3s1.3-3,3-3h45c1.7,0,3,1.3,3,3S88.2,82,86.5,82z"></path></g>
@@ -142,12 +171,12 @@ const Navbar = ({ onSearch }) => {
                             </Link>
                         </li>
 
-
+{/* '
                         <li className="nav-item">
                             <Link className="nav-link" to={'whysleepmatters'}  onClick={handleShowNavbar}>
                                 Why Sleep Matters
                             </Link>
-                        </li>
+                        </li>' */}
 
                         <li className="nav-item">
                             <Link className="nav-link" to={'services'}  onClick={handleShowNavbar}>
@@ -185,6 +214,15 @@ const Navbar = ({ onSearch }) => {
                         </li>
 
 
+                        <li className="nav-item">
+
+                        <User.Provider value={[tema, promjenaTeme]}>
+        {isMobile && (<Button variant="secondary" size="sm" onClick={changeTheme} style={{maxHeight:"30px"}}>{tema=="a" ? "Athlete" : "Individual"}</Button>
+
+            )}
+
+        </User.Provider>
+</li>
                     </ul>
 
 

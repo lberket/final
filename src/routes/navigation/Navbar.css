@@ -36,8 +36,12 @@
     .navbar-brand {
         margin-left: 1rem;
     }
+    .logo{
+      max-width: 8rem !important;
+    }
     
 }
+
 
 .el-right{
     position: absolute; 
