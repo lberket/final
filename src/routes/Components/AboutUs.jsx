@@ -9,15 +9,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Form from 'react-bootstrap/Form';
 import Accordion from 'react-bootstrap/Accordion';
+import User from "./kontekst";
+import Alert from 'react-bootstrap/Alert';
 
 
 function AboutUs() {
 
 
     const [isMobile, setIsMobile] = useState(false);
+    const tema = useContext(User);
   
   
     useEffect(() => {
@@ -48,6 +51,9 @@ function AboutUs() {
     const handleShow2 = () => setShow2(true);
 return(
     <>
+
+<User.Provider value={tema}>
+
     <br /><br /><br />
     
     <h1 className='au-title'>About Us</h1>
@@ -55,82 +61,57 @@ return(
 
 <div style={{fontSize:"20px"}}>
 
-<Row>
-    <Col xs={1} md={2} lg={2}>
+<br />
+{tema=="athlete" ? 
 
-        </Col>
-        <Col xs={10} md={8} lg={4} style={{display: isMobile ? "flex" : "none"}}>
-        <p style={{padding:"40px", paddingRight:"15px", fontSize:"21.5px", fontFamily:'PT Serif, serif'}}>
-        At SomnoTeam, we have assembled a <u>highly skilled and abmitious team of 
-        professionals</u> dedicated to optimizing athlete sleep and performance. Our 
-         <u> team combines medical expertise, research knowledge, and business acumen</u> to provide comprehensive and effective personalized sleep consultations. Building on our expertise and commitment to optimizing athlete sleep, we have already <u>established strong partnerships and conducted sleep 
-         research in collaboration with leading clubs such as</u> <b>Real Madrid C.F</b>. and 
-         <b> RB Leipzig. </b>   
-         </p>
-        </Col>
-        <Col  xs={0} md={0} lg={4} style={{display: isMobile ? "flex" : "none"}}>
-        <p  style={{padding:"40px", paddingLeft:"15px", fontSize:"21.5px", fontFamily:'PT Serif, serif'}}>
-        These collaborations have provided us with invaluable <u>experience, insights, 
-        and a deep understanding</u> of the sleep challenges faced by top-level football 
-        teams. Working closely with athletes, coaches, and support staff, we have 
-        gained firsthand knowledge of the unique demands of the sport and the 
-        critical role that sleep plays in athletic performance. This experience 
-        positions us as leaders in the field and enables us to leverage our 
-        extensive knowledge to provide exceptional sleep consultation services 
-        to athletes and teams worldwide.   
-        </p>
-        </Col>
+<Alert key="light" variant="light">
+  <p className='alert-text0'>
+      Our team of experts is dedicated to crafting personalized sleep optimization strategies tailored to each athlete's unique needs and goals. We go beyond simply providing data; we guide athletes through comprehending the results and their impact on performance. Our unwavering commitment extends beyond initial assessment, offering longitudinal support to ensure sustained success. We empower athletes to continuously adapt and refine their sleep strategies, ensuring they maintain their competitive edge throughout their athletic journey.
 
-        <Col xs={10} md={8} lg={4} style={{display: isMobile ? "none" : "flex"}}>
-        <p>
-        At SomnoTeam, we have assembled a <u>highly skilled and abmitious team of 
-        professionals</u> dedicated to optimizing athlete sleep and performance. Our
-         <u>team combines medical expertise, research knowledge, and business acume
-         n</u> to provide comprehensive and effective personalized sleep consultatio
-         ns. Building on our expertise and commitment to optimizing athlete sleep
-         , we have already <u>established strong partnerships and conducted sleep 
-         research in collaboration with leading clubs such as</u> <b>Real Madrid C.F</b>. and 
-         <b> RB Leipzig. </b>            
-        These collaborations have provided us with invaluable <u>experience, insights, 
-        and a deep understanding</u> of the sleep challenges faced by top-level football 
-        teams. Working closely with athletes, coaches, and support staff, we have 
-        gained firsthand knowledge of the unique demands of the sport and the 
-        critical role that sleep plays in athletic performance. This experience 
-        positions us as leaders in the field and enables us to leverage our 
-        extensive knowledge to provide exceptional sleep consultation services 
-        to athletes and teams worldwide.             
-
+  </p>
+</Alert>
+:
+<Alert key="light" variant="light">
+<p className='alert-text0'>
+Our team of experts is dedicated to crafting personalized sleep optimization strategies tailored to each individual's unique needs and goals. We go beyond simply providing data; we guide individuals through comprehending the results and their impact on their overall well-being and productivity. Our unwavering commitment extends beyond initial assessment, offering longitudinal support to ensure sustained success. We empower individuals to continuously adapt and refine their sleep strategies, ensuring they maintain optimal health and vitality throughout their lives.
 </p>
-</Col>
-    
-      </Row>
+</Alert>
+}
+
+
+<br />
 </div>
 
     <h2 className='au-title' style={{color:"#595959"}}>Our team:</h2>
 
-<br />
+
+
+
+
     <div className='club-center'>
 
 
 
-<div className='clubs-row'>
+<div className='clubs-row2'>
 
-  <div className="clubs" onClick={handleShow} style={{cursor:"pointer"}}>
+  <div className="clubs" onClick={handleShow} style={{cursor:"pointer", marginBottom:"-60px"}}>
     
 <br /><img src={alen} alt="" className='club-img' style={{maxWidth:"200px", maxHeight:"200px"}}/>
     <p style={{marginBottom:"8px", fontSize:"x-large"}}>
       Alen Juginović, MD 
     </p>
-    <p>
-    Co-Founder & CEO
+    <p style={{color:"#555555"}}>
+    President of SomnoTeam
     </p>
+    <p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>Postdoctoral Researcher in Sleep Neurobiology at Harvard Medical School, Boston, MA, USA
+</p>
 
   </div>
 
 
 
 
-  <div className="clubs" onClick={handleShow1} style={{cursor:"pointer"}}>
+  <div className="clubs" onClick={handleShow1} style={{cursor:"pointer", marginBottom: "-60px"}}>
   <br /> <br /> <br /> 
     <br />
     <div style={{marginLeft:"30px", marginRight:"30px"}}>
@@ -139,26 +120,79 @@ return(
     <p style={{marginBottom:"8px", fontSize:"x-large"}}>
     Miro Vuković, MD 
     </p>
-    <p>
-    Chief Operating Officer
-    </p> </div>
+    <p style={{maxWidth:"225px", color:"#555555"}}>
+    Vice-president and Chief Operating Officer at SomnoTeam
+    </p> 
+    <p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+    Research Fellow in Biostatistics at the University of Split School of Medicine, Split, Croatia
+</p>
+    </div>
   </div>
 
 
 
 
 
-  <div className="clubs" onClick={handleShow2} style={{cursor:"pointer"}}>
+  <div className="clubs" onClick={handleShow2} style={{cursor:"pointer"  ,  marginBottom: "-60px"
+}}>
     <br /> <br /> <br /> <br /> 
     <p style={{marginBottom:"8px", fontSize:"x-large"}}>
     Ivan Aranza, MD 
     </p>
-    <p>Chief Scientific Officer</p>
+    <p style={{maxWidth:"225px", color:"#555555"}}>
+      Chief Scientific Officer at SomnoTeam</p>
+      <p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+      Institute of Emergency Medicine, Split, Croatia
+</p>
+  </div>
   </div>
 </div>
+
+<br />
+
+<div className='club-center'>
+
+<div className='clubs-row2'>
+
+
+  <div className="clubs">
+
+    <p style={{marginBottom:"8px", fontSize:"x-large"}}>
+    Mirko Armanda
+    </p>
+    <p style={{maxWidth:"225px",color:"#555555"}}>
+    Research Associate at SomnoTeam  </p>
+    <p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+
+    University of Split School of Medicine, Split, Croatia  </p>
+
+  </div>
+
+
+
+
+  <div className="clubs">
+
+
+    <div style={{marginLeft:"30px", marginRight:"30px"}}>
+
+   
+    <p style={{marginBottom:"8px", fontSize:"x-large"}}>
+    
+Valentina Biloš
+
+    </p>
+    <p style={{maxWidth:"225px", color:"#555555"}}>
+    Data Scientist at SomnoTeam
+    </p> 
+    <p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+    University of Split School of Medicine, Split, Croatia
+</p>
+    </div>
+  </div>
 </div>
 
-
+</div>
 
 
 
@@ -248,6 +282,92 @@ return(
 <br />
 
 
+
+{tema=="athlete" && 
+
+<Row>
+    <Col xs={1} md={2} lg={2}>
+
+        </Col>
+        <Col xs={10} md={8} lg={4} style={{display: isMobile ? "flex" : "none"}}>
+
+        <Card        bg="light"
+          key="secondary">
+        <Card.Body>
+          <Card.Text>
+          <p style={{padding:"10px", marginBottom:"-1px", fontSize:"18.5px", fontFamily:'DM Serif Display', color:"#555555"}}>
+        At SomnoTeam, we have assembled a <u>highly skilled and abmitious team of 
+        professionals</u> dedicated to optimizing athlete sleep and performance. Our 
+         <u> team combines medical expertise, research knowledge, and business acumen</u> to provide comprehensive and effective personalized sleep consultations. Building on our expertise and commitment to optimizing athlete sleep, we have already <u>established strong partnerships and conducted sleep 
+         research in collaboration with leading clubs such as</u> <b>Real Madrid C.F</b>. and 
+         <b> RB Leipzig. </b>   
+         </p>
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      <br />
+
+        
+
+
+        </Col>
+        <Col  xs={0} md={0} lg={4} style={{display: isMobile ? "flex" : "none"}}>
+
+        <Card        bg="light"
+          key="secondary">
+        <Card.Body>
+          <Card.Text>
+        <p  style={{padding:"10px", paddingLeft:"15px", marginBottom:"-1px", fontSize:"18.5px", fontFamily:'DM Serif Display', color:"#555555"}}>
+        These collaborations have provided us with invaluable <u>experience, insights, 
+        and a deep understanding</u> of the sleep challenges faced by top-level football 
+        teams. Working closely with athletes, coaches, and support staff, we have 
+        gained firsthand knowledge of the unique demands of the sport and the 
+        critical role that sleep plays in athletic performance. This experience 
+        positions us as leaders in the field and enables us to leverage our 
+        extensive knowledge to provide exceptional sleep consultation services 
+        to athletes and teams worldwide.   
+        </p>
+        </Card.Text>
+        </Card.Body>
+      </Card>
+        </Col>
+
+        <Col xs={10} md={8} lg={4} style={{display: isMobile ? "none" : "flex"}}>
+
+
+        <Card        bg="light"
+          key="secondary">
+        <Card.Body>
+          <Card.Text>
+        <p>
+        At SomnoTeam, we have assembled a <u>highly skilled and abmitious team of 
+        professionals</u> dedicated to optimizing athlete sleep and performance. Our
+         <u>team combines medical expertise, research knowledge, and business acume
+         n</u> to provide comprehensive and effective personalized sleep consultatio
+         ns. Building on our expertise and commitment to optimizing athlete sleep
+         , we have already <u>established strong partnerships and conducted sleep 
+         research in collaboration with leading clubs such as</u> <b>Real Madrid C.F</b>. and 
+         <b> RB Leipzig. </b>            
+        These collaborations have provided us with invaluable <u>experience, insights, 
+        and a deep understanding</u> of the sleep challenges faced by top-level football 
+        teams. Working closely with athletes, coaches, and support staff, we have 
+        gained firsthand knowledge of the unique demands of the sport and the 
+        critical role that sleep plays in athletic performance. This experience 
+        positions us as leaders in the field and enables us to leverage our 
+        extensive knowledge to provide exceptional sleep consultation services 
+        to athletes and teams worldwide.             
+       </p> 
+       </Card.Text>
+        </Card.Body>
+      </Card>
+
+</Col>
+    
+      </Row>
+}
+
+<br />
+
                 <h2 className='au-title' style={{color:"#595959"}}>What Differentiates Us from the Rest? </h2>
 
 
@@ -256,7 +376,7 @@ return(
 
                 <Accordion className='accord'>
       <Accordion.Item eventKey="0">
-        <Accordion.Header style={{padding:"8px"}}>Holistic Approach and Personalization</Accordion.Header>
+        <Accordion.Header style={{padding:"8px", marginBottom:"-8px"}}><h5><b>Holistic Approach and Personalization</b></h5></Accordion.Header>
         <Accordion.Body style={{fontSize:"16.5px", textAlign:"left"}}>
           
         Unlike generic solutions in the market, we recognize that <u>each athlete has 
@@ -271,7 +391,7 @@ return(
       </Accordion.Item>
 
       <Accordion.Item eventKey="1">
-        <Accordion.Header  style={{padding:"8px"}}>Expert Team from Leading World Institutions</Accordion.Header>
+        <Accordion.Header  style={{padding:"8px", marginBottom:"-8px"}}><h5><b>Expert Team from Leading World Institutions</b></h5></Accordion.Header>
         <Accordion.Body  style={{fontSize:"16.5px", textAlign:"left"}}>
         Our team of sleep experts is the driving force behind our exceptional 
         services. We have carefully assembled a roster of renowned sleep consultants 
@@ -286,14 +406,14 @@ return(
       </Accordion.Item>
 
       <Accordion.Item eventKey="2">
-        <Accordion.Header style={{padding:"8px"}}>Ongoing Support and Refinements</Accordion.Header>
+        <Accordion.Header style={{padding:"8px", marginBottom:"-8px"}}><h5><b>Ongoing Support and Refinements</b></h5></Accordion.Header>
         <Accordion.Body  style={{fontSize:"16.5px", textAlign:"left"}}>
         We understand that <u>sleep optimization is not a one-time event</u> but an ongoing journey. We go beyond the one-time consultation. Our commitment to athletes' success means we follow them throughout their journey, providing continuous support, monitoring, and adjustment of their sleep programs. This ensures sustained improvements in sleep quality and performance.
         </Accordion.Body>
       </Accordion.Item>
 
       <Accordion.Item eventKey="3">
-        <Accordion.Header style={{padding:"8px"}}>Data-Driven Insights</Accordion.Header>
+        <Accordion.Header style={{padding:"8px", marginBottom:"-8px"}}><h5><b>Data-Driven Insights</b></h5></Accordion.Header>
         <Accordion.Body  style={{fontSize:"16.5px", textAlign:"left"}}>
         We believe in the power of data to drive meaningful results. We go beyond 
         subjective assessments by leveraging advanced wearable technology and sleep 
@@ -306,6 +426,7 @@ return(
 
     </Accordion>
 
+</User.Provider>
     </>
 )
 }

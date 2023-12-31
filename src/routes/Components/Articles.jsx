@@ -32,8 +32,12 @@ function Articles(props) {
     <>
 
     <h1 className='research-title'>
-    Sleep Research & Insights: </h1><h1  className='research-title2'>
+    <b>
+    Sleep Research & Insights:     </b></h1>
+  
+      <h1  className='research-title2'>  <b>
     Advancing Athlete Performance through Scientific Knowledge
+    </b>
     </h1>
 
 <h5 className='research'>

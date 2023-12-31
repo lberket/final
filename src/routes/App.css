@@ -290,6 +290,14 @@ body {
 
   justify-content: space-between;
 }
+.clubs-row2 {
+  margin-left: 3%;
+  margin-right: 3%;
+  display: flex;
+  width: 70%;
+  justify-content: center;
+
+}
 
 .circle-row {
 
@@ -396,7 +404,11 @@ a:hover {
     justify-content: center;
     width: 90%;
   }
-
+  .clubs-row2{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+  }
   .clubs{
     margin-right: 3% !important;
     margin-bottom: 18px;
@@ -610,6 +622,10 @@ a:hover {
     width: 62% !important;
     margin-left: 19% !important;
   }
+  .alert-text0{
+    width: 62% !important;
+    margin-left: 19% !important;
+  }
   .m-title{
     width: 60% !important;
     margin-left: 20% !important;
@@ -619,8 +635,8 @@ a:hover {
     width: 70% !important;
   }
   .mb-mn{
-    margin-left: 22% !important;
-    width: 56% !important;
+    margin-left: 26% !important;
+    width: 48% !important;
   }
 }
 
@@ -628,6 +644,12 @@ a:hover {
   width: 90%;
   margin-left: 5%;
   margin-bottom:-1px;
+}
+.alert-text0{
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom:-1px;
+  font-size: medium !important;
 }
 .m-title{
   font-family: 'DM Serif Display', serif !important;

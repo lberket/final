@@ -180,7 +180,7 @@ const Navbar = ({ onSearch , changeTheme}) => {
 
                         <li className="nav-item">
                             <Link className="nav-link" to={'services'}  onClick={handleShowNavbar}>
-                                Our Services for Athletes & Teams
+                                Our Services 
                             </Link>
                         </li>
 {/* 

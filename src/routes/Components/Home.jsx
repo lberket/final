@@ -20,7 +20,7 @@ import User from "./kontekst";
 import Modal from 'react-bootstrap/Modal';
 import Alert from 'react-bootstrap/Alert';
 import Accordion from 'react-bootstrap/Accordion';
-
+import alen from "../images/alen.jpg";
 
 function Home() {
   const [show, setShow] = useState(false);
@@ -41,9 +41,12 @@ function Home() {
     handleResize(); // Check initial screen width
     window.addEventListener('resize', handleResize);
 
+ 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+
+  
   }, []);
 
   return (
@@ -626,69 +629,12 @@ function Home() {
         </Accordion>
 
 
+        <Link to={"services"} ><h5 style={{ textDecoration: "underline", color: "#666666", marginTop:"-15px" }}><a><b>See more</b></a></h5>
+        </Link>
 
 
-{tema=="athlete" ?
-
-        <Card
-          bg="light"
-          key="secondary"
-          className="mb-mn"
-        >
-          <Card.Body>
-            <Card.Title>        <strong style={{ fontSize: "18px" }} className='a-title'>FOR TEAMS, CLUBS, FEDERATIONS AND COMPETITIONS
-            </strong></Card.Title>
-            <Card.Text style={{ marginTop: "20px", fontSize: "15px" }}>
-              <div style={{ paddingLeft: "2%", paddingRight: "1%" }}>
-                Are you seeking to elevate the sleep health and performance of your entire team, club, federation or competition participants? Partner with us to design customized sleep optimization programs tailored to the unique needs of your group. We'll work closely with you to establish a holistic approach to sleep enhancement, ensuring that each athlete receives the personalized support they need to achieve their full potential.
-                <br />
-                <Link to={"contactus"} style={{ color: "#555555" }}><b>Contact us</b></Link> today to discuss how we can help your team reach new heights of performance through optimized sleep strategies.
-                <br /><br />
-
-                <strong style={{ fontSize: "18px" }} className='a-title'>
-                  DO YOU NEED A CUSTOM PACKAGE?
-                </strong><br />
-                <p style={{ marginBottom: "-10px", marginTop: "10px" }} >
-                  Our team of experts recognizes that every athlete's path to peak performance is unique. That's why we're committed to crafting personalized sleep optimization packages that align with your specific goals and aspirations. Reach out to us today, and let us collaborate with you to design a bespoke sleep optimization plan that complements your training regimen and helps you achieve your athletic dreams.
-                </p>
-              </div>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-
-      :
-      <Card
-      bg="light"
-      key="secondary"
-      className="mb-mn"
-    >
-      <Card.Body>
-        <Card.Title>        <strong style={{ fontSize: "18px" }} className='a-title'>DO YOU NEED A CUSTOM PACKAGE?
-        </strong></Card.Title>
-        <Card.Text style={{ marginTop: "20px", fontSize: "15px" }}>
-          <div style={{ paddingLeft: "2%", paddingRight: "1%" }}>
-          Our team of experts understands that every individual's path to enhanced well-being and peak performance is unique. That's why we're committed to tailoring personalized sleep optimization packages that align with your specific goals and aspirations.
-            <Link to={"contactus"} style={{ color: "#555555" }}><b> Reach out to us</b></Link>  today, and let us collaborate with you to design a bespoke sleep optimization plan that complements your lifestyle and helps you achieve your personal and professional dreams.
-            <br /><br />
-
-            <strong style={{ fontSize: "18px" }} className='a-title'>
-            ELEVATE EMPLOYEE WELLNESS AND PEAK PERFORMANCE WITH OUR CORPORATE SLEEP OPTIMIZATION PROGRAMS
-            </strong><br />
-            <p style={{ marginBottom: "-10px", marginTop: "10px" }} >
-            Are you seeking to enhance the sleep health and overall well-being of your entire workforce? Partner with our team of experts to design customized sleep optimization programs tailored to the unique needs of your organization. We'll collaborate closely with you to establish a holistic approach to sleep enhancement, ensuring that each employee receives the personalized support they need to achieve their full potential and contribute to the company's success.            </p>
-          </div>
-        </Card.Text>
-      </Card.Body>
-    </Card>
-}
         <br /><br />
 
-        <strong style={{ fontSize: "44px" }} className='a-title'>Expert Guidance and Longitudinal Support</strong>
-
-
-
-
-        <br />
 
 
         <div>
@@ -743,6 +689,10 @@ function Home() {
               </div>
             </div>
           </div>
+
+
+
+
           <div className='large-div'>
 
             <Container>
@@ -771,8 +721,126 @@ function Home() {
           </div>
         </div>
 
+<br /><br />
 
-        <br />
+
+<h2 className='au-title' style={{color:"#595959"}}>Our team:</h2>
+
+
+
+
+
+<div className='club-center'>
+
+
+
+<div className='clubs-row'>
+
+<div className="clubs"  style={{marginBottom:"-90px"}}>
+
+<br /><img src={alen} alt="" className='club-img' style={{maxWidth:"200px", maxHeight:"200px"}}/>
+<p style={{marginBottom:"8px", fontSize:"x-large"}}>
+  Alen Juginović, MD 
+</p>
+<p style={{color:"#555555"}}>
+President of SomnoTeam
+</p>
+<p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>Postdoctoral Researcher in Sleep Neurobiology at Harvard Medical School, Boston, MA, USA
+</p>
+
+</div>
+
+
+
+
+<div className="clubs">
+
+<div style={{marginLeft:"30px", marginRight:"30px", marginBottom:"-90px"}}>
+
+<br /><br /><br /><br />
+
+<p style={{marginBottom:"8px", fontSize:"x-large"}}>
+Miro Vuković, MD 
+</p>
+<p style={{maxWidth:"225px", color:"#555555"}}>
+Vice-president and Chief Operating Officer at SomnoTeam
+</p> 
+<p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+Research Fellow in Biostatistics at the University of Split School of Medicine, Split, Croatia
+</p>
+</div>
+</div>
+
+
+
+
+
+<div className="clubs" style={{marginBottom:"-80px"}}>
+<br /><br /><br /><br />
+<p style={{marginBottom:"8px", fontSize:"x-large"}}>
+Ivan Aranza, MD 
+</p>
+<p style={{maxWidth:"225px", color:"#555555"}}>
+  Chief Scientific Officer at SomnoTeam</p>
+  <p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+  Institute of Emergency Medicine, Split, Croatia
+</p>
+</div>
+</div>
+</div>
+
+<br /><br />
+
+<div className='club-center'>
+
+<div className='clubs-row2'>
+
+
+<div className="clubs">
+
+<p style={{marginBottom:"8px", fontSize:"x-large"}}>
+Mirko Armanda
+</p>
+<p style={{maxWidth:"225px",color:"#555555"}}>
+Research Associate at SomnoTeam  </p>
+<p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+
+University of Split School of Medicine, Split, Croatia  </p>
+
+</div>
+
+
+
+
+<div className="clubs">
+
+
+<div style={{marginLeft:"30px", marginRight:"30px"}}>
+
+
+<p style={{marginBottom:"8px", fontSize:"x-large"}}>
+
+Valentina Biloš
+
+</p>
+<p style={{maxWidth:"225px", color:"#555555"}}>
+Data Scientist at SomnoTeam
+</p> 
+<p style={{fontSize:"14px", maxWidth:"225px", fontFamily:"PT Serif"}}>
+University of Split School of Medicine, Split, Croatia
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+<Link to={"aboutus"} ><h5 style={{ textDecoration: "underline", color: "#666666" }}><a>Discover More About Us</a></h5>
+        </Link>
+
+        <br /><br />
 
         <Card
           bg="light"
