@@ -374,11 +374,16 @@ function Home() {
 
         </Accordion>
 
-        <Alert key={"light"} variant={"light"} style={{ marginTop: "-30px" }}>
-          Want more information on the science behind next-generation sleep optimization? Learn more <Link to={"articles"} ><a style={{ textDecoration: "underline", color: "#888888" }}>here</a>
-          </Link>.
-        </Alert>
+        <div style={{ marginTop: "-20px" }}>
+          Want more information on the science behind next-generation sleep optimization? Learn more 
+          <Link to={"articles"} >
+            <a style={{ textDecoration: "underline", color: "#888888" }}> here.</a>
+          </Link>
 
+
+        </div>
+        
+<br />
         <h2 style={{ fontSize: "44px" }} className='m-title'>
 
           Ready to get started?
@@ -390,10 +395,11 @@ function Home() {
 
 
         </h2>
+<br /><br />
 
 
 
-        <br /><br />
+        
 
 
 
