@@ -271,7 +271,7 @@ function Home() {
         <Accordion className='accord' style={{ marginTop: "-20px" }}>
           <Accordion.Item eventKey="0">
             <Accordion.Header style={{ padding: "8px", fontFamily: "DM Serif Display" }}><h5>Comprehensive Sleep Analysis with Personalized Sleep Recommendations</h5> </Accordion.Header>
-            <Accordion.Body style={{ fontSize: "16.5px", textAlign: "left", textAlign: "left" }}>
+            <Accordion.Body style={{ fontSize: "16.5px", textAlign: "left" }}>
               {tema == "athlete" ?
                 <ul>
                   <li>
